@@ -14,4 +14,5 @@ def about():
 
 @app.get("/random/")
 def random():
-    return str(randint(1,500000))
+    randNum = randint(1,500000)
+    return render_template('pages/random.jinja', number = randNum)
