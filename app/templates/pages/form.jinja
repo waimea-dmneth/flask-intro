@@ -1,0 +1,40 @@
+{% extends 'pages/base.jinja' %}
+
+{% block title %}
+  Flask demo - Form
+{% endblock %}
+
+{% block content %}
+  <article>
+    <h2> a malicious form !this is a scam</h2>
+
+    <form method="post" action="/processForm">
+
+      <fieldset>
+        <label> 
+          YOUR credit card number 
+          <input
+            name="ccn"
+            type="number"
+            placeholder="~~~ ~~~ ~~~ ~~~"
+            required
+          >
+        </label>
+
+        <label> 
+          YOUR social security number
+          <input
+            name="ssn"
+            type="number"
+            placeholder="~~~~~"
+            min="0"
+            required
+          >
+        </label>
+      </fieldset>
+
+      <input type="submit" value="Steal Information">
+
+    </form>
+  </article>
+{% endblock %}
