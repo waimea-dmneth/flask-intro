@@ -1,0 +1,21 @@
+{% extends 'pages/base.jinja' %}
+
+{% block title %}
+  Flask demo - Data from form
+{% endblock %}
+
+{% block content %}
+
+   <h2>YOUR intered Data (my data now)</h2>
+
+   <article>
+      <h3>YOUR credit card number</h3>
+      {{ ccn }}
+   </article>
+   <article>
+      <h3>YOUR social security number</h3>
+      {{ ssn }}
+   </article>
+ 
+    
+{% endblock %}
